@@ -146,7 +146,7 @@ const StatusNotifierWatcher = new Lang.Class({
     ProtocolVersion: function() {
         // "The version of the protocol the StatusNotifierWatcher instance implements." [sic]
         // in what syntax?
-        return "appindicatorsupport@rgcjonas.gmail.com (KDE; compatible; mostly) GNOME Shell/%s".format(ShellConfig.PACKAGE_VERSION);
+        return "ubuntu-indicators@ubuntu.com (KDE; compatible; mostly) GNOME Shell/%s".format(ShellConfig.PACKAGE_VERSION);
     },
 
     get RegisteredStatusNotifierItems() {
