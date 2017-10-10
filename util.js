@@ -60,8 +60,6 @@ const getUniqueBusNameSync = function(bus, name) {
                                  "GetNameOwner", variant_name, null,
                                  Gio.DBusCallFlags.NONE, -1, null).deep_unpack();
 
-    Logger.debug("Unique name of "+name+" is "+unique);
-
     return unique;
 }
 
@@ -128,7 +126,7 @@ const dbusNodeImplementsInterfaces = function(node_info, interfaces) {
     if (!(node_info instanceof Gio.DBusNodeInfo) || !Array.isArray(interfaces))
         return false;
 
-    for (iface of interfaces) {
+    for (let iface of interfaces) {
         if (node_info.lookup_interface(iface) !== null)
             return true;
     }
